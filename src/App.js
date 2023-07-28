@@ -12,29 +12,30 @@ const App = () => {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark" expand="md">
             <Container>
               <Navbar.Brand>
-                <Link to={"/create-student"} className="nav-link">
+                <Link to={"/"} className="nav-link">
                   React MERN Stack App
                 </Link>
               </Navbar.Brand>
-              <Nav className="justify-content-end">
+              <Navbar.Toggle aria-controls="navbar-nav" />
+              <Navbar.Collapse id="navbar-nav" className="justify-content-end">
                 <Nav>
-                  <Link to={"/create-student"} className="nav-link">
+                  <Nav.Link as={Link} to={"/create-student"}>
                     Create Student
-                  </Link>
+                  </Nav.Link>
                 </Nav>
                 <Nav>
-                  <Link to={"/student-list"} className="nav-link">
+                  <Nav.Link as={Link} to={"/student-list"}>
                     Student List
-                  </Link>
+                  </Nav.Link>
                 </Nav>
-              </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar>
         </header>
-        <Container>
+        <Container fluid>
           <Row>
             <Col md={12}>
               <div className="wrapper">
